@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="fav-icon.png" type="image/x-icon" />
+    <title>Luckey Scorrer</title>
+  </head>
+  <body>
+    <div class="game-board">
+      <div class="side side-1 side--active">
+        <h2 class="player player--1">player 1</h2>
+        <p class="score--main score--main-1">0</p>
+
+        <div class="sub-score-board">
+          <p class="text-current">current</p>
+          <p class="score--sub score--sub-1">0</p>
+        </div>
+      </div>
+      <div class="control-board">
+        <a href="#" class="btn btn--reset">🔃 New Game</a>
+        <img src="dice-1.png" class="dice hidden" alt="dice" />
+        <a href="#" class="btn btn--roll">🎲 roll dice</a>
+        <a href="#" class="btn btn--hold">🛑 hold</a>
+      </div>
+      <div class="side side-2">
+        <h2 class="player player--2">player 2</h2>
+        <p class="score--main score--main-2">0</p>
+
+        <div class="sub-score-board">
+          <p class="text-current">current</p>
+          <p class="score--sub score--sub-2">0</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
