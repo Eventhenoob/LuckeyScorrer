@@ -1,9 +1,9 @@
 "use strict";
 // naming players
-const player1Name = prompt("Enter First Player Name:");
-const player2Name = prompt("Enter Second Player Name:");
-document.querySelector(".player--1").textContent = player1Name;
-document.querySelector(".player--2").textContent = player2Name;
+// const player1Name = prompt("Enter First Player Name:");
+// const player2Name = prompt("Enter Second Player Name:");
+// document.querySelector(".player--1").textContent = player1Name;
+// document.querySelector(".player--2").textContent = player2Name;
 
 // User Interface
 
@@ -37,12 +37,28 @@ let isGameOver = false;
 reset();
 
 // functions
+
+const checkWinner = function () {
+  const mainScore = getCompnentByCurrentPlayer(mainScore1, mainScore2);
+  if (mainScore >= 10) {
+    const side = getCompnentByCurrentPlayer(side1UI, side2UI);
+    side.classList.add("side--winner");
+    // changing color theme when game is over
+    root.style.setProperty("--color-theme-1", "#DF2935");
+    root.style.setProperty("--color-theme-2", "#C94E4C");
+    isGameOver = true;
+  }
+};
+
+// globel function
 function reset() {
   currentPlayer = 1;
   currentScore = 0;
   mainScore1 = 0;
   mainScore2 = 0;
   isGameOver = false;
+  root.style.setProperty("--color-theme-1", "#edcc0f");
+  root.style.setProperty("--color-theme-2", "#7abf0ac3");
 
   if (side2UI.classList.contains("side--winner"))
     side2UI.classList.remove("side--winner");
@@ -88,19 +104,6 @@ const forScore = function (number) {
   scoreUI.textContent = currentScore += number;
 };
 
-const checkWinner = function () {
-  const mainScore = getCompnentByCurrentPlayer(mainScore1, mainScore2);
-  if (mainScore >= 100) {
-    const side = getCompnentByCurrentPlayer(side1UI, side2UI);
-    side.classList.add("side--winner");
-    // changing color theme when game is over
-    root.style.setProperty("--color-theme-1", "#DF2935");
-    root.style.setProperty("--color-theme-2", "#C94E4C");
-    isGameOver = true;
-  }
-};
-
-// globel function
 function getCompnentByCurrentPlayer(comp1, comp2) {
   return currentPlayer === 1 ? comp1 : comp2;
 }

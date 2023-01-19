@@ -13,6 +13,7 @@
 }
 .hidden {
   display: none;
+  opacity: 0;
 }
 
 html {
@@ -25,6 +26,7 @@ body {
   align-items: center;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
+  transition: background 0.2s;
   background-image: linear-gradient(
     to bottom right,
     var(--color-theme-1) 0%,
@@ -108,6 +110,7 @@ body {
   position: absolute;
   height: 7rem;
   top: 50%;
+  transition: all 0.3s;
   transform: translateY(-50%);
 }
 
