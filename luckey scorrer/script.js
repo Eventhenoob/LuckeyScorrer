@@ -1,5 +1,5 @@
 "use strict";
-naming players
+// naming players
 const player1Name = prompt("Enter First Player Name:");
 const player2Name = prompt("Enter Second Player Name:");
 document.querySelector(".player--1").textContent = player1Name;
