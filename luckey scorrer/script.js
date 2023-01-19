@@ -1,9 +1,9 @@
 "use strict";
-// naming players
-// const player1Name = prompt("Enter First Player Name:");
-// const player2Name = prompt("Enter Second Player Name:");
-// document.querySelector(".player--1").textContent = player1Name;
-// document.querySelector(".player--2").textContent = player2Name;
+naming players
+const player1Name = prompt("Enter First Player Name:");
+const player2Name = prompt("Enter Second Player Name:");
+document.querySelector(".player--1").textContent = player1Name;
+document.querySelector(".player--2").textContent = player2Name;
 
 // User Interface
 
@@ -40,7 +40,7 @@ reset();
 
 const checkWinner = function () {
   const mainScore = getCompnentByCurrentPlayer(mainScore1, mainScore2);
-  if (mainScore >= 10) {
+  if (mainScore >= 100) {
     const side = getCompnentByCurrentPlayer(side1UI, side2UI);
     side.classList.add("side--winner");
     // changing color theme when game is over
